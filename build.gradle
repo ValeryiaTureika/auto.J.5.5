@@ -21,11 +21,11 @@ dependencies {
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
     testImplementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.1.0'
     testImplementation "io.github.bonigarcia:webdrivermanager:5.0.2"
-    testImplementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.1.0'
-
-
+    testImplementation 'org.slf4j:slf4j-simple:1.6.1'
+    testImplementation 'io.github.bonigarcia:selenium-jupiter:4.0.1'
 }
 
 test {
     useJUnitPlatform()
+    systemProperty 'selenide.headless', System.getProperty('selenide.headless')
 }
